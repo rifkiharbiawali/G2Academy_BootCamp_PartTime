@@ -2,17 +2,12 @@ import React, { Component } from "react";
 import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
 import Cover from "../Container/Cover";
 import Back from "./Back";
-import Register from "../Container/Admin/Register";
+import Register from "../Container/LoginSiswa/Register";
 import LoginAdmin from "../Container/LoginAdmin";
 import LoginSiswa from "../Container/LoginSiswa";
 import HalamanAdmin from "../Container/Admin";
 import Siswa from "../Container/Siswa";
-import Rifki from "./Rifki.jpg";
-import Asep from "./Asep.jpg";
-import Dian from "./Dian.jpg";
-import Shirleen from "./Shirleen.jpg";
-import Pramadhio from "./Pramadhio.jpg";
-import Yoshep from "./Yoshep.jpg";
+import "./Rifki.jpg";
 
 class NavRouter extends Component {
   constructor(props) {
@@ -23,65 +18,53 @@ class NavRouter extends Component {
       nama: "",
       moto: "",
       foto: "",
-      divisi: "",
       linkgit: "",
       password: "",
       useradmin: "",
       passwordadmin: "",
       data: [
         {
-          id: 1,
           nama: "Rifki",
           moto: "Bastotan Fil Ilmi Wal Jismi",
-          foto: Rifki,
+          foto: "Rifki.jpg",
           linkgit: "https://github.com/rifkiharbiawali",
-          divisi: "Frontend",
           password: "Rifki",
         },
         {
-          id: 2,
           nama: "ASEP",
           moto:
             "he who didn't taste the bitterness of learning, will suffer the humiliation of ignorance for the rest of his life",
-          foto: Asep,
+          foto: "../Container/img/Asep.jpg",
           linkgit: "https://github.com/asep10001",
-          divisi: "Frontend",
+
           password: "ASEP",
         },
         {
-          id: 3,
           nama: "Dian",
           moto: "Sabar, ikhlas, Bersyukur",
-          foto: Dian,
+          foto: "../Container/img/Dian.jpg",
           linkgit: "https://github.com/dianprsty",
-          divisi: "Backend",
           password: "Dian",
         },
         {
-          id: 4,
           nama: "Shirleen",
           moto: "Mengajar adalah cara terbaik untuk belajar",
-          foto: Shirleen,
+          foto: "../Container/img/Shirleen.jpg",
           linkgit: "https://github.com/shirahub",
-          divisi: "Backend",
           password: "Shirleen",
         },
         {
-          id: 5,
           nama: "Pramadhio",
           moto: "Khawatir adalah penyalahgunaan sebuah imajinasi",
-          foto: Pramadhio,
+          foto: "../Container/img/Pramadhio.jpg",
           linkgit: "https://github.com/dhioputro",
-          divisi: "Backend",
           password: "Pramadhio",
         },
         {
-          id: 6,
           nama: "Yoshep",
           moto: "Ora Et Labora",
-          foto: Yoshep,
+          foto: "../Container/img/Yoshep.jpg",
           linkgit: "https://github.com/YosephMarioWibowo/",
-          divisi: "Frontend",
           password: "Yoshep",
         },
       ],
@@ -103,7 +86,6 @@ class NavRouter extends Component {
 
   ubahlogin = (nilai) => {
     this.setState({ login: nilai });
-    console.log(nilai);
   };
 
   simpan = () => {};
@@ -113,11 +95,7 @@ class NavRouter extends Component {
         <Router>
           <Switch>
             <Route exact path="/">
-              <Cover
-                loginadmin={this.state.loginadmin}
-                loginkaryawan={this.state.login}
-                dataadmin={this.state.dataadmin}
-              />
+              <Cover data2={this.props.data} />
             </Route>
             <Route path="/Ngasal" component={Back} />
             <Route exact path="/Admin">
@@ -148,7 +126,6 @@ class NavRouter extends Component {
                 password={this.state.password}
                 data={this.state.data}
                 ubahdata={this.ubahdata}
-                divisi={this.state.divisi}
               />
             </Route>
             <Route exact path="/Admin/:user">
@@ -157,19 +134,11 @@ class NavRouter extends Component {
                 floginadmin={this.ubahloginadmin}
                 loginadmin={this.state.loginadmin}
                 data={this.state.data}
-                ubahdata={this.ubahdata}
               />
             </Route>
             <Route
-              path="/Siswa/:nama/:moto/:divisi/:linkgit/"
-              // /:moto/:status/:foto/:linkgit/
-              children={(props) => (
-                <Siswa
-                  {...props}
-                  ubahlogin={this.ubahlogin}
-                  login={this.state.login}
-                />
-              )}
+              path="/Siswa/:nama/:moto/:status/:foto/:linkgit/"
+              component={Siswa}
             />
             {/* <Siswa ubahlogin={this.ubahlogin} />
             </Route> */}

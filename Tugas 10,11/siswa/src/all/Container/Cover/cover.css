@@ -4,12 +4,12 @@ img {
 }
 
 .cover {
-  /* background-image: url("../img/bg.jpg"); */
+  background-image: url("../img/bg.jpg");
   background-repeat: no-repeat, repeat;
   background-size: cover;
   width: 100%;
   height: 635px;
-  color: black;
+  color: white;
   text-align: center;
 }
 

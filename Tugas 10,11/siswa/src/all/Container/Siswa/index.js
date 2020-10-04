@@ -1,23 +1,13 @@
 import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Button, Card } from "react-bootstrap";
-import { Redirect, Link } from "react-router-dom";
-import Menu from "./Menu";
-// import Axios from "axios";
+import { Redirect } from "react-router-dom";
 
 class Siswa extends Component {
   constructor(props) {
     super(props);
     this.state = {};
   }
-
-  // componentDidMount() {
-  //   let params = this.props.match.params.id;
-  //   console.log(params);
-  //   Axios.get(`http://localhost:3004/posts/${params}`).then((res) => {
-  //     console.log("result", res);
-  //   });
-  // }
 
   cegah = () => {
     if (this.props.login === false) {
@@ -31,7 +21,7 @@ class Siswa extends Component {
   logout = () => {
     console.log(this.props);
     console.log(this.props.login);
-    this.props.ubahlogin(false);
+    // this.props.ubahlogin(false);
   };
   render() {
     return (
@@ -52,29 +42,6 @@ class Siswa extends Component {
             </a>
           </div>
         </div> */}
-
-        <div className="header">
-          <ul>
-            <Link
-              to="/"
-              style={{
-                textDecoration: "none",
-                color: "white",
-                alignItems: "center",
-              }}
-            >
-              <Menu>Hi {this.props.match.params.nama}</Menu>
-            </Link>
-          </ul>
-          <ul>
-            <Menu>
-              <Button variant="danger" onClick={this.logout}>
-                Logout
-              </Button>
-            </Menu>
-          </ul>
-        </div>
-
         <Card style={{ width: "18rem" }}>
           <Card.Img
             variant="top"
@@ -83,13 +50,11 @@ class Siswa extends Component {
           <Card.Body>
             <Card.Title>{this.props.match.params.nama}</Card.Title>
             <Card.Text>{this.props.match.params.moto}</Card.Text>
-            <Card.Text>{this.props.match.params.divisi}</Card.Text>
-            <a href={this.props.match.params.linkgit}>
-              <Button variant="primary">Github</Button>
-            </a>
+            <a href={this.props.match.params.linkgit}></a>
+            <Button variant="primary">Github</Button>
           </Card.Body>
         </Card>
-        {/* <button onClick={this.logout}>Logout</button> */}
+        <button onClick={this.logout}>Tes</button>
         {this.cegah()}
       </>
     );

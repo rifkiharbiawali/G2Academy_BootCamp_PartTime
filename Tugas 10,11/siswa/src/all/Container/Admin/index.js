@@ -1,9 +1,8 @@
 import React, { Component } from "react";
-import { Redirect, Link } from "react-router-dom";
+import { Redirect } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Button, Card } from "react-bootstrap";
 import "./admin.css";
-import Menu from "./Menu";
 // const tes = ({ match }) => console.log(`match`, match) || <div>tes</div>;
 class HalamanAdmin extends Component {
   constructor(props) {
@@ -22,7 +21,6 @@ class HalamanAdmin extends Component {
     }
   };
 
-  delete = () => {};
   //loopcard = () => {
   // this.props.data.map((value, index) => {
   //   return (
@@ -51,37 +49,11 @@ class HalamanAdmin extends Component {
 
     return (
       <>
-        <div className="header">
-          <ul>
-            <Link
-              to="/"
-              style={{
-                textDecoration: "none",
-                color: "white",
-                alignItems: "center",
-              }}
-            >
-              <Menu>Beranda</Menu>
-            </Link>
-            <Link
-              to="/Register"
-              style={{ textDecoration: "none", color: "white" }}
-            >
-              <Menu>Input Karyawan</Menu>
-            </Link>
-          </ul>
-          <ul>
-            <Menu>
-              <Button variant="danger" onClick={this.logout}>
-                Logout
-              </Button>
-            </Menu>
-          </ul>
-        </div>
-
-        <h1>Hi HRD {this.props.dataadmin.nama}</h1>
+        <h1>Hi {this.props.dataadmin.nama}</h1>
         {/* <button onClick={this.logout}>Logout</button> */}
-
+        <Button variant="danger" onClick={this.logout}>
+          Logout
+        </Button>
         <div className="cardsiswa">
           {this.props.data.map((value, index) => {
             return (
@@ -90,8 +62,6 @@ class HalamanAdmin extends Component {
                 <Card.Body>
                   <Card.Title>{(index + 1, value.nama)}</Card.Title>
                   <Card.Text>{value.moto}</Card.Text>
-                  <Card.Text>{value.divisi}</Card.Text>
-
                   <a
                     href={value.linkgit}
                     target="_blank"
@@ -99,24 +69,6 @@ class HalamanAdmin extends Component {
                   >
                     <Button variant="primary">Github</Button>
                   </a>
-                  <br />
-                  <br />
-                  <Button variant="primary" onClick={this.Edit}>
-                    Edit
-                  </Button>
-                  <Button
-                    variant="danger"
-                    onClick={() => {
-                      alert("Yakin Menghapus?");
-                      this.props.ubahdata({
-                        data: this.props.data.splice(index, 1),
-                      });
-
-                      return;
-                    }}
-                  >
-                    Delete
-                  </Button>
                 </Card.Body>
               </Card>
             );

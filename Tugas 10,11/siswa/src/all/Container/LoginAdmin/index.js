@@ -47,7 +47,7 @@ class LoginAdmin extends Component {
   render() {
     return (
       <form>
-        <h4>Hi HRD</h4>
+        <h4>Hi Admin</h4>
         <Input
           nama="nama"
           tipe="text"

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Button from "./Button";
 import "./cover.css";
 // import LoginAdmin from "../LoginAdmin";
-import { Link, Redirect } from "react-router-dom";
+import { Link } from "react-router-dom";
 // import LoginSiswa from "../LoginSiswa";
 // import Register from "../LoginSiswa/Register";
 class Cover extends Component {
@@ -11,14 +11,6 @@ class Cover extends Component {
     this.state = {};
   }
 
-  cegah = () => {
-    if (this.props.loginadmin === true) {
-      return <Redirect to={`/Admin/${this.props.dataadmin.nama}`} />;
-    } else if (this.props.loginkaryawan === true) {
-      return <Redirect to="/Karyawan/user" />;
-    }
-  };
-
   // tes = () => {
   //   console.log(this.props.data2);
   // };
@@ -26,14 +18,16 @@ class Cover extends Component {
   render() {
     return (
       <div className="cover">
-        <h1>Karyawan App</h1>
+        <h1>G2 Academy Student</h1>
         <h3>Siapa Kamu?</h3>
         <div className="tombol">
           <Link to="/Admin">
-            <Button tipe="btn btn-primary">HRD</Button>
+            <Button tipe="btn btn-primary" klik={this.useradmin}>
+              Admin
+            </Button>
           </Link>
           <Link to="/Siswa">
-            <Button tipe="btn btn-primary">Karyawan</Button>
+            <Button tipe="btn btn-primary">Siswa</Button>
           </Link>
           {/* <Link to="/tes">
             <Button tipe="btn btn-primary">Tes</Button>
@@ -44,7 +38,6 @@ class Cover extends Component {
         </Router> */}
 
         {/* </Router> */}
-        {this.cegah()}
       </div>
     );
   }
