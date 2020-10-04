@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="./style/style.css" />
 
     <!-- script -->
-    <script type="text/javascript" src="./js/tampilParkir.js" defer></script>
+    <script type="text/javascript" src="./js/parkir.js" defer></script>
 
     <title>Tabel</title>
   </head>
@@ -23,13 +23,22 @@
       <nav>
         <ul>
           <li class="listnone" style="background-color: yellow;">
-            <a class="linknone" href="./index.html">Aplikasi Parkir</a>
+            <a class="linknone" href="./beranda.html">Pemilu</a>
           </li>
           <li class="listnone">
-            <a class="linknone" href="./index.html">Home</a>
+            <a class="linknone" href="./beranda.html">Beranda</a>
           </li>
           <li class="listnone aktif">
-            <a class="linknone" href="./tabel.html">Tabel</a>
+            <a class="linknone" href="./editProfile.html">Edit Profile</a>
+          </li>
+          <li class="listnone">
+            <a class="linknone" href="./daftarCalon.html">Daftar Calon</a>
+          </li>
+          <li class="listnone">
+            <a class="linknone" href="./daftarPemilih.html">Daftar Pemilih</a>
+          </li>
+          <li class="listnone">
+            <a class="linknone" href="./sesiPilih.html">Sesi Pilih</a>
           </li>
         </ul>
       </nav>
@@ -41,31 +50,47 @@
         </ul>
       </nav>
     </header>
-    <div class="content" style="height: 800px;">
-      <input
-        type="text"
-        id="auto_cari"
-        placeholder="Cari"
-        onkeyup="auto_cari()"
-      />
-      <table class="mt30" id="tabel_auto">
-        <thead>
-          <tr>
-            <th>No.</th>
-            <th>ID</th>
-            <th>Jenis Kendaraan</th>
-            <th>No Plat</th>
-            <th>Masuk</th>
-            <th>Keluar</th>
-            <th>Lama Parkir</th>
-            <th>Tarif</th>
-            <th>Hitung</th>
-            <th>Keluar</th>
-          </tr>
-        </thead>
-        <tbody id="tabel1"></tbody>
-      </table>
-      <div id="printKarcis" class="box2 mt30 mb30" style="height: 210px;"></div>
+    <div class="content">
+      <div
+        class="box"
+        style="height: 430px; margin-top: 80px; text-align: center;"
+      >
+        <form action="./beranda.html" class="input mt30 mb10">
+          <h1 style="font-size: 35px; color: rgb(70, 70, 70);">
+            Edit Data Organisasi
+          </h1>
+          <br />
+          <input id="namaO2" type="text" placeholder="Nama Organisasi" />
+          <input id="namaA2" type="text" placeholder="Nama Admin" />
+          <input
+            id="emailO2"
+            type="email"
+            placeholder="Email Organisasi/Admin"
+          />
+          <input id="passwordO2" type="password" placeholder="Password" />
+          <textarea
+            name=""
+            id="alamatO2"
+            cols="22"
+            rows="10"
+            placeholder="Alamat Organisasi"
+          ></textarea>
+          <textarea
+            name=""
+            id="deskripsiO2"
+            cols="22"
+            rows="10"
+            placeholder="Deskripsi Organisasi"
+          ></textarea>
+          <input
+            type="submit"
+            name=""
+            id="editP"
+            value="Edit Profile"
+            class="btn_ubah"
+          />
+        </form>
+      </div>
     </div>
     <footer>
       <div class="keterangan pd30">
