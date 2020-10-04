@@ -1,0 +1,12 @@
+.Box {
+  background-color: rgb(228, 228, 224);
+
+  width: 500px;
+  height: 250px;
+}
+.Box2 {
+  border: 2px dashed gray;
+  margin-top: 30px;
+  width: 500px;
+  height: 160px;
+}

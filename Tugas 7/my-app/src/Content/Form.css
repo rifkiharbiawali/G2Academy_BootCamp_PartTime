@@ -1,0 +1,53 @@
+.FormP {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+label {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  width: 500px;
+  text-align: center;
+}
+input[type="text"],
+input[type="number"] {
+  padding: 5px 0;
+  outline-color: rgb(0, 153, 255);
+  margin: 10px;
+  border: none;
+  width: 25px;
+}
+input[type="submit"] {
+  width: 450px;
+  height: 35px;
+  font-size: 15px;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+input[type="button"] {
+  width: 450px;
+  height: 35px;
+  font-size: 15px;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+input[type="submit"],
+input[type="button"] {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+input[type="submit"]:hover {
+  background-color: grey;
+}
+input[type="button"]:hover {
+  background-color: grey;
+}

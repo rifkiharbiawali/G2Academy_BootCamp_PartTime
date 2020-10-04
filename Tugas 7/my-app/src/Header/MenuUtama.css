@@ -1,0 +1,55 @@
+.menuMaster {
+  display: flex;
+  justify-content: space-around;
+}
+.menuUtama {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  list-style: none;
+  background-color: whitesmoke;
+  width: 100%;
+}
+.kanan {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  list-style: none;
+  background-color: whitesmoke;
+}
+.logo {
+  font-size: 20px;
+  color: black;
+  padding: 14px 16px;
+  background-color: chartreuse;
+  width: 80px;
+  transition: color 0.2s;
+}
+.logo:hover {
+  color: white;
+}
+.beranda {
+  font-size: 20px;
+  color: black;
+  padding: 14px 16px;
+  width: 55px;
+  transition: background-color 0.2s;
+  transition: color 0.2s;
+}
+.beranda:active {
+  background-color: grey;
+  color: white;
+}
+
+.logout {
+  font-size: 20px;
+  color: black;
+  padding: 14px 16px;
+  width: 55px;
+  transition: background-color 0.2s;
+  transition: color 0.2s;
+}
+.logout:active {
+  background-color: grey;
+  color: white;
+}
