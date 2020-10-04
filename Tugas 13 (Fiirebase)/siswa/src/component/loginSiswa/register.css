@@ -1,0 +1,15 @@
+.form {
+  width: 300px;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 798px;
+}
+
+button {
+  margin: 10px;
+}
