@@ -1,0 +1,245 @@
+/* universal */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.mt10 {
+  margin-top: 10px;
+}
+
+.mr10 {
+  margin-right: 10px;
+}
+
+.mb10 {
+  margin-bottom: 10px;
+}
+
+.ml10 {
+  margin-left: 10px;
+}
+
+.m10 {
+  margin: 10px;
+}
+
+.pd10 {
+  padding: 10px;
+}
+
+.pd30 {
+  padding: 30px;
+}
+
+.pdt10 {
+  padding-top: 10px;
+}
+
+.pdr10 {
+  padding-right: 10px;
+}
+
+.pdb10 {
+  padding-bottom: 10px;
+}
+
+.pdl10 {
+  padding-left: 10px;
+}
+
+.tcenter {
+  text-align: center;
+}
+
+/* style none */
+.linknone {
+  text-decoration: none;
+  color: black;
+}
+
+.listnone {
+  list-style: none;
+}
+
+/* header menu */
+header,
+footer {
+  background-color: whitesmoke;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100%;
+}
+
+header ul {
+  display: flex;
+}
+
+header li a {
+  padding: 14px 16px;
+  transition: background-color 0.5s;
+}
+
+header li a:hover {
+  background-color: rgb(175, 175, 172);
+}
+
+header a {
+  display: flex;
+  align-items: center;
+}
+
+.aktif {
+  background-color: rgb(175, 175, 172);
+}
+/* content */
+.content {
+  width: 100%;
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  background-color: rgb(228, 228, 224);
+  width: 500px;
+  height: 400px;
+  margin-bottom: 100px;
+}
+
+#print {
+  width: 600px;
+  font-size: 90px;
+  outline: none;
+  border: none;
+  color: grey;
+}
+
+.tombol1 {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  /* flex-direction: row; */
+  align-content: center;
+}
+
+.tombol2 {
+  display: flex;
+  flex-wrap: wrap;
+  /* flex-direction: row; */
+  align-content: center;
+}
+
+.tombol1 input, #btn_delete, #submit_buat, .tombol2 input {
+  border: none;
+  outline: none;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  font-size: 30px;
+  text-decoration: none;
+  margin: 0px;
+  transition: background-color 0.2s;
+}
+
+.bgy {
+  background-color: yellow;
+}
+
+.bgg {
+  background-color: greenyellow;
+}
+
+.tombol1 input:hover {
+  background-color: rgb(214, 214, 214);
+}
+
+.tombol2 input:hover {
+  background-color: rgb(214, 214, 214);
+}
+
+.tombol1 input:active {
+  background-color: grey;
+}
+
+.tombol2 input:active {
+  background-color: grey;
+}
+
+#btn_delete:hover {
+  background-color: grey;
+}
+
+#submit_buat:hover {
+  background-color: grey;
+}
+
+table {
+  border-collapse: collapse;
+  width: 400px;
+  nth-child
+}
+
+th,td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even){background-color: gainsboro}
+
+th{
+  background-color: yellow;
+}
+
+#btn_delete {
+  width: 75px;
+  height: 25px;
+  font-size: 15px;
+}
+
+.input input {
+ padding: 5px 0;
+ outline-color: yellow;
+}
+
+#submit_buat {
+  width: 50px;
+  height: 35px;
+  font-size: 15px;
+}
+
+/* footer menu */
+footer {
+  background-color: rgb(38, 41, 41);
+}
+
+footer .keterangan,
+.map,
+.medsos {
+  width: 500px;
+  height: 250px;
+}
+
+footer h3,
+p {
+  color: grey;
+}
+
+footer .icon-med {
+  display: flex;
+  flex-direction: row;
+}
+
+footer .icon-cont li {
+  display: flex;
+  flex-direction: row;
+}
+
+footer ul li a img,
+footer .icon-cont li img {
+  width: 30px;
+  height: 30px;
+}

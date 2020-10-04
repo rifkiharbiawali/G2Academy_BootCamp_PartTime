@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <!-- meta -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Rifki Harbi Awali" />
+    <meta name="keywords" content="Kalkulator" />
+    <meta name="description" content="Kalkulator Serba Guna" />
+
+    <!-- link -->
+    <link
+      rel="shortcut icon"
+      href="./img/icon/kalkulator.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./style/style.css" />
+
+    <!-- script -->
+    <script type="text/javascript" src="./js/kal.js" defer></script>
+    <title>Kalkulator</title>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li class="listnone" style="background-color: yellow;">
+            <a class="linknone" href="./index.html">Kalkulator</a>
+          </li>
+          <li class="listnone">
+            <a class="linknone aktif" href="./index.html">Home</a>
+          </li>
+          <li class="listnone">
+            <a class="linknone" href="./tabel.html">Tabel</a>
+          </li>
+        </ul>
+      </nav>
+      <nav>
+        <ul>
+          <li class="listnone">
+            <a class="linknone" href="./index.html">Logout</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div class="content">
+      <div class="box">
+        <div class="layar">
+          <form name="tampil">
+            <input
+              type="text"
+              name="print_k"
+              id="print"
+              align="right"
+              value=""
+              autocomplete="off"
+            />
+          </form>
+        </div>
+        <div id="tombol_kal" class="tombol1">
+          <!-- <button>9</button>
+          <button>8</button>
+          <button>7</button>
+          <button>6</button>
+          <button>5</button>
+          <button>4</button>
+          <button>3</button>
+          <button>2</button>
+          <button>1</button>
+          <button>0</button>
+          <button>+</button>
+          <button>-</button>
+          <button>/</button>
+          <button>x</button>
+          <button>=</button> -->
+        </div>
+        <div class="tombol2">
+          <input type="button" value="+" onclick="cetak('+')" />
+          <input type="button" value="-" onclick="cetak('-')" />
+          <input type="button" value="/" onclick="cetak('/')" />
+          <input type="button" value="*" onclick="cetak('*')" />
+          <input type="button" value="C" class="bgg" onclick="hapus()" />
+          <input
+            type="button"
+            value="="
+            class="bgy"
+            style="width: 500px;"
+            onclick="hasil()"
+          />
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="keterangan pd30">
+        <h3 class="mb10">Kalkulator</h3>
+        <p align="justify">
+          Kalkulator menjadi alat bantu hitung yang terbukti sangat berguna bagi
+          kehidupan manusia modern. Namun kini inovasi berupa kalkulator online
+          memberikan lebih banyak kemudahan lagi. Sayangnya tidak banyak orang
+          yang sadar manfaat dan fungsi akan kalkukator online tersebut.
+        </p>
+        <br />
+        <p style="color: grey;"><b>2020 &copy; Rifki Harbi Awali</b></p>
+      </div>
+      <div class="map pd30">
+        <h3 class="mb10">Maps</h3>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d30819.44122463358!2d106.8905388851272!3d-6.353258669001988!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69ecf2e8b7c801%3A0xc555bb3b2101e041!2sJl.%20Masjid%20Tanzilul%20Huda%20No.11%2C%20RT.8%2FRW.10%2C%20Cibubur%2C%20Kec.%20Ciracas%2C%20Kota%20Jakarta%20Timur%2C%20Daerah%20Khusus%20Ibukota%20Jakarta%2013720!5e0!3m2!1sid!2sid!4v1597272783791!5m2!1sid!2sid"
+          width="420"
+          height="200"
+          frameborder="0"
+          style="border: 0;"
+          allowfullscreen=""
+          aria-hidden="false"
+          tabindex="0"
+        ></iframe>
+      </div>
+      <div class="medsos pd30">
+        <h3 class="mb10">Contact</h3>
+        <ul class="icon-cont" style="color: grey; font-size: 17px;">
+          <li class="listnone">
+            <img src="./img/icon/telephone.png" alt="Phone" />
+            <span class="ml10">085793491196</span>
+          </li>
+          <li class="listnone">
+            <img src="./img/icon/note.png" alt="Email" />
+            <span class="ml10">rifkiharbiawali@gmail.com</span>
+          </li>
+        </ul>
+        <ul class="icon-med mt10">
+          <li class="listnone linknone mr10">
+            <a href=""><img src="./img/icon/facebook.png" alt="facebook" /></a>
+          </li>
+          <li class="listnone linknone mr10">
+            <a href=""><img src="./img/icon/twitter.png" alt="twitter" /></a>
+          </li>
+          <li class="listnone linknone">
+            <a href=""
+              ><img src="./img/icon/instagram.png" alt="instagram"
+            /></a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>
