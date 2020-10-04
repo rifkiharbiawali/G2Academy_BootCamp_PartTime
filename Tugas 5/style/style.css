@@ -29,7 +29,7 @@
   margin-top: 30px;
 }
 
-mb30 {
+.mb30 {
   margin-bottom: 30px;
 }
 
@@ -105,7 +105,7 @@ header a {
 /* content */
 .content {
   width: 100%;
-  height: 700px;
+  height: 510px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -115,15 +115,21 @@ header a {
 .box {
   background-color: rgb(228, 228, 224);
   width: 500px;
-  height: 550px;
-  margin-bottom: 100px;
+  height: 250px;
+  margin-bottom: 10px;
 }
 
 .box form {
   display: flex;
   justify-content: center;
-  flex-direction: column;
-  margin: 10px;
+  flex-wrap: wrap;
+  /* margin: 10px; */
+}
+
+.box2 {
+  width: 500px;
+  height: 160px;
+  border: 2px dashed gray;
 }
 
 #print {
@@ -201,7 +207,8 @@ header a {
 table {
   border-collapse: collapse;
   border-spacing: 0;
-  width: 1200px;
+  width: 1000px;
+  height: 600px;
   border: 1px solid #ddd;
   display: block;
   overflow-x: scroll;
@@ -228,11 +235,10 @@ th {
   font-size: 15px;
 }
 
-.input input,
-textarea,
-select {
+input[type="text"],
+input[type="number"] {
   padding: 5px 0;
-  outline-color: rgb(109, 109, 255);
+  outline-color: rgb(0, 153, 255);
   margin: 10px;
   border: none;
 }
@@ -245,6 +251,11 @@ select {
   align-self: center;
   justify-content: center;
   margin-top: 20px;
+}
+
+.input label {
+  width: 450px;
+  text-align: center;
 }
 
 /* footer menu */
@@ -260,7 +271,9 @@ footer .keterangan,
 }
 
 footer h3,
-p {
+p,
+.box2 h1,
+.box2 h2 {
   color: grey;
 }
 

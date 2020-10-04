@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <!-- meta -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Rifki Harbi Awali" />
+    <meta name="keywords" content="Kalkulator" />
+    <meta name="description" content="Kalkulator Serba Guna" />
+
+    <!-- link -->
+    <link rel="shortcut icon" href="./img/icon/list.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./style/style.css" />
+
+    <!-- script -->
+    <script type="text/javascript" src="./js/tampilParkir.js" defer></script>
+
+    <title>Tabel</title>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li class="listnone" style="background-color: yellow;">
+            <a class="linknone" href="./index.html">Aplikasi Parkir</a>
+          </li>
+          <li class="listnone">
+            <a class="linknone" href="./index.html">Home</a>
+          </li>
+          <li class="listnone aktif">
+            <a class="linknone" href="./tabel.html">Tabel</a>
+          </li>
+        </ul>
+      </nav>
+      <nav>
+        <ul>
+          <li class="listnone">
+            <a class="linknone" href="./index.html">Logout</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div class="content" style="height: 800px;">
+      <input
+        type="text"
+        id="auto_cari"
+        placeholder="Cari"
+        onkeyup="auto_cari()"
+      />
+      <table class="mt30" id="tabel_auto">
+        <thead>
+          <tr>
+            <th>No.</th>
+            <th>ID</th>
+            <th>Jenis Kendaraan</th>
+            <th>No Plat</th>
+            <th>Masuk</th>
+            <th>Keluar</th>
+            <th>Lama Parkir</th>
+            <th>Tarif</th>
+            <th>Hitung</th>
+            <th>Keluar</th>
+          </tr>
+        </thead>
+        <tbody id="tabel1"></tbody>
+      </table>
+      <div id="printKarcis" class="box2 mt30 mb30" style="height: 210px;"></div>
+    </div>
+    <footer>
+      <div class="keterangan pd30">
+        <h3 class="mb10">Parkir</h3>
+        <p align="justify">
+          Parkir adalah keadaan tidak bergerak suatu kendaraan yang bersifat
+          sementara karena ditinggalkan oleh pengemudinya.
+        </p>
+        <br />
+        <p style="color: grey;"><b>2020 &copy; Rifki Harbi Awali</b></p>
+      </div>
+      <div class="map pd30">
+        <h3 class="mb10">Maps</h3>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d30819.44122463358!2d106.8905388851272!3d-6.353258669001988!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69ecf2e8b7c801%3A0xc555bb3b2101e041!2sJl.%20Masjid%20Tanzilul%20Huda%20No.11%2C%20RT.8%2FRW.10%2C%20Cibubur%2C%20Kec.%20Ciracas%2C%20Kota%20Jakarta%20Timur%2C%20Daerah%20Khusus%20Ibukota%20Jakarta%2013720!5e0!3m2!1sid!2sid!4v1597272783791!5m2!1sid!2sid"
+          width="420"
+          height="200"
+          frameborder="0"
+          style="border: 0;"
+          allowfullscreen=""
+          aria-hidden="false"
+          tabindex="0"
+        ></iframe>
+      </div>
+      <div class="medsos pd30">
+        <h3 class="mb10">Contact</h3>
+        <ul class="icon-cont" style="color: grey; font-size: 17px;">
+          <li class="listnone">
+            <img src="./img/icon/telephone.png" alt="Phone" />
+            <span class="ml10">085793491196</span>
+          </li>
+          <li class="listnone">
+            <img src="./img/icon/note.png" alt="Email" />
+            <span class="ml10">rifkiharbiawali@gmail.com</span>
+          </li>
+        </ul>
+        <ul class="icon-med mt10">
+          <li class="listnone linknone mr10">
+            <a href=""><img src="./img/icon/facebook.png" alt="facebook" /></a>
+          </li>
+          <li class="listnone linknone mr10">
+            <a href=""><img src="./img/icon/twitter.png" alt="twitter" /></a>
+          </li>
+          <li class="listnone linknone">
+            <a href=""
+              ><img src="./img/icon/instagram.png" alt="instagram"
+            /></a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>

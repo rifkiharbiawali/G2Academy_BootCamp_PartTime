@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="./style/style.css" />
 
     <!-- script -->
+    <script type="text/javascript" src="./js/parkir.js" defer></script>
 
     <title>Tabel</title>
   </head>
@@ -21,13 +22,13 @@
     <header>
       <nav>
         <ul>
-          <li class="listnone" style="background-color: yellow">
-            <a class="linknone" href="./index.html">Kalkulator</a>
-          </li>
-          <li class="listnone">
-            <a class="linknone" href="./index.html">Home</a>
+          <li class="listnone" style="background-color: yellow;">
+            <a class="linknone" href="./index.html">Aplikasi Parkir</a>
           </li>
           <li class="listnone aktif">
+            <a class="linknone" href="./index.html">Home</a>
+          </li>
+          <li class="listnone">
             <a class="linknone" href="./tabel.html">Tabel</a>
           </li>
         </ul>
@@ -41,75 +42,53 @@
       </nav>
     </header>
     <div class="content">
-      <!-- <form name="lokal" id="tabellokal">
-        <input type="text" name="inputname" />
-        <input type="submit" />
-      </form>
-      <p id="tampilkan">tes</p> -->
-      <!-- <form id="buat" class="input mb10" action="tabel.html">
-        <input id="nama" type="text" placeholder="Nama Kandidat" name="nama" />
-        <input id="hobi" type="text" placeholder="Hobi Kandidat" />
-        <input id="submit_buat" type="submit" value="Buat" />
-      </form> -->
-
-      <table class="mt30">
-        <thead>
-          <tr>
-            <th>No.</th>
-            <th>NIK</th>
-            <th>Nama Karyawan</th>
-            <th>Tempat, Tanggal Lahir</th>
-            <th>Jenis Kelamin</th>
-            <th>Alamat</th>
-            <th>Agama</th>
-            <th>Status Pernikahan</th>
-            <th>Pekerjaan</th>
-            <th>Kewarganegaraan</th>
-            <th>Edit</th>
-            <th>Delete</th>
-          </tr>
-        </thead>
-        <tbody id="tabel1">
-          <!-- <tr>
-              <td>1</td>
-              <td>Doni</td>
-              <td>14 Januari 1999</td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>Tia</td>
-              <td>16 Maret 1997</td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td>Bambang</td>
-              <td>27 September 1996</td>
-            </tr>
-            <tr>
-              <td>4</td>
-              <td>Julia</td>
-              <td>16 September 1996</td>
-            </tr>
-            <tr>
-              <td>5</td>
-              <td>Kiki</td>
-              <td>12 Oktober 1995</td>
-            </tr> -->
-        </tbody>
-      </table>
+      <div class="box mt30">
+        <form action="./index.html" class="input mt30 mb10">
+          <label for="A" class="ml10">No Plat Kendaraan</label><br />
+          <input
+            id="A"
+            type="text"
+            placeholder="B"
+            maxlength="2"
+            style="width: 25px; text-transform: uppercase;"
+          />
+          <input
+            id="B"
+            type="number"
+            placeholder="1234"
+            min="0"
+            max="9999"
+            style="width: 60px;"
+          />
+          <input
+            id="C"
+            type="text"
+            placeholder="CEK"
+            maxlength="3"
+            style="width: 35px; text-transform: uppercase;"
+          />
+          <input type="submit" name="" id="submit_buat" value="Tombol Tiket" />
+        </form>
+        <button
+          id="bantuan"
+          class="btn_ubah"
+          style="width: 450px; height: 35px; margin-left: 25px;"
+        >
+          Tombol Bantuan
+        </button>
+        <p id="keteranganB"></p>
+      </div>
+      <div id="printKarcis" class="box2 mt30"></div>
     </div>
     <footer>
       <div class="keterangan pd30">
-        <h3 class="mb10">Tabel</h3>
+        <h3 class="mb10">Parkir</h3>
         <p align="justify">
-          Tabel merupakan susunan data dalam baris dan kolom, atau mungkin dalam
-          struktur yang lebih kompleks. Tabel banyak digunakan dalam komunikasi,
-          penelitian, dan analisis data. Tabel sering muncul muncul di media
-          cetak, tulisan, perangkat lunak komputer, arsitektur hiasan, rambu
-          lalu lintas, dan lain-lain.
+          Parkir adalah keadaan tidak bergerak suatu kendaraan yang bersifat
+          sementara karena ditinggalkan oleh pengemudinya.
         </p>
         <br />
-        <p style="color: grey"><b>2020 &copy; Rifki Harbi Awali</b></p>
+        <p style="color: grey;"><b>2020 &copy; Rifki Harbi Awali</b></p>
       </div>
       <div class="map pd30">
         <h3 class="mb10">Maps</h3>
@@ -118,7 +97,7 @@
           width="420"
           height="200"
           frameborder="0"
-          style="border: 0"
+          style="border: 0;"
           allowfullscreen=""
           aria-hidden="false"
           tabindex="0"
@@ -126,7 +105,7 @@
       </div>
       <div class="medsos pd30">
         <h3 class="mb10">Contact</h3>
-        <ul class="icon-cont" style="color: grey; font-size: 17px">
+        <ul class="icon-cont" style="color: grey; font-size: 17px;">
           <li class="listnone">
             <img src="./img/icon/telephone.png" alt="Phone" />
             <span class="ml10">085793491196</span>
@@ -151,6 +130,5 @@
         </ul>
       </div>
     </footer>
-    <script type="text/javascript" src="./js/tampilData.js"></script>
   </body>
 </html>
