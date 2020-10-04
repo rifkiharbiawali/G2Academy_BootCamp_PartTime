@@ -2,7 +2,7 @@ import React, { Component } from "react";
 // import Grup from "./Grup";
 import "../LoginAdmin/input.css";
 import Input from "./Input";
-import { Link, Redirect } from "react-router-dom";
+import { Redirect } from "react-router-dom";
 // import Register from "./Register";
 class LoginSiswa extends Component {
   constructor(props) {
@@ -28,7 +28,9 @@ class LoginSiswa extends Component {
         return (
           <Redirect
             // to="/Siswa/tes/tes2/res/tes"
-            to={`/Siswa/${array[i].nama}/${array[i].moto}/${this.props.login}/${array[i].foto}/${array[i].linkgit}`}
+            to={`/Siswa/${array[i].nama}/${array[i].moto}/tes/tes`}
+
+            // to={`/Siswa/${array[i].nama}/${array[i].moto}/${this.props.login}/${array[i].foto}/${array[i].linkgit}`}
           />
         );
       }
@@ -53,7 +55,7 @@ class LoginSiswa extends Component {
       <>
         {this.pindah()}
         <form>
-          <h4>Hi Siswa</h4>
+          <h4>Hi Karyawan</h4>
           <Input
             nama="nama"
             tipe="text"
@@ -76,9 +78,9 @@ class LoginSiswa extends Component {
             nilai="Login"
             klik={this.jika}
           />
-          <Link to="/Register">
+          {/* <Link to="/Register">
             <Input tipe="button" kelas="btn btn-primary" nilai="Register" />
-          </Link>
+          </Link> */}
         </form>
       </>
     );

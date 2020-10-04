@@ -19,20 +19,24 @@ class Register extends Component {
 
   inputregister = () => {
     let array = this.props.data;
+    let sama = false;
     for (let i = 0; i < array.length; i++) {
       if (this.props.nama === array[i].Email) {
-      } else {
-        console.log(this.props.data);
-        alert("data tersimpan");
-        this.props.data.push({
-          nama: `${this.props.nama}`,
-          moto: `${this.props.moto}`,
-          foto: `${this.props.foto}`,
-          linkgit: `${this.props.linkgit}`,
-          password: `${this.props.password}`,
-        });
-        return;
+        sama = true;
       }
+    }
+    if (sama) {
+      console.log(this.props.data);
+      alert("data tersimpan");
+      this.props.data.push({
+        nama: `${this.props.nama}`,
+        moto: `${this.props.moto}`,
+        foto: `${this.props.foto}`,
+        linkgit: `${this.props.linkgit}`,
+        password: `${this.props.password}`,
+      });
+    } else {
+      alert("nama sudah ada");
     }
   };
 

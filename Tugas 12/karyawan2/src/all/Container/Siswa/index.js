@@ -50,12 +50,13 @@ class Siswa extends Component {
           <Card.Body>
             <Card.Title>{this.props.match.params.nama}</Card.Title>
             <Card.Text>{this.props.match.params.moto}</Card.Text>
-            <a href={this.props.match.params.linkgit}></a>
+            <a href={this.props.match.params.linkgit}>GitHub</a>
             <Button variant="primary">Github</Button>
           </Card.Body>
         </Card>
         <button onClick={this.logout}>Tes</button>
         {this.cegah()}
+        {/* {this.tes()} */}
       </>
     );
   }
