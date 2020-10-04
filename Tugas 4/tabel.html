@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="./style/style.css" />
 
     <!-- script -->
-    <script type="text/javascript" src="./js/tabel.js" defer></script>
 
     <title>Tabel</title>
   </head>
@@ -22,7 +21,7 @@
     <header>
       <nav>
         <ul>
-          <li class="listnone" style="background-color: yellow;">
+          <li class="listnone" style="background-color: yellow">
             <a class="linknone" href="./index.html">Kalkulator</a>
           </li>
           <li class="listnone">
@@ -47,46 +46,55 @@
         <input type="submit" />
       </form>
       <p id="tampilkan">tes</p> -->
-      <form id="buat" class="input mb10" action="tabel.html">
+      <!-- <form id="buat" class="input mb10" action="tabel.html">
         <input id="nama" type="text" placeholder="Nama Kandidat" name="nama" />
         <input id="hobi" type="text" placeholder="Hobi Kandidat" />
         <input id="submit_buat" type="submit" value="Buat" />
-      </form>
-      <table>
+      </form> -->
+
+      <table class="mt30">
         <thead>
           <tr>
             <th>No.</th>
-            <th>Nama Kandidat</th>
-            <th>Hobi Kandidat</th>
+            <th>NIK</th>
+            <th>Nama Karyawan</th>
+            <th>Tempat, Tanggal Lahir</th>
+            <th>Jenis Kelamin</th>
+            <th>Alamat</th>
+            <th>Agama</th>
+            <th>Status Pernikahan</th>
+            <th>Pekerjaan</th>
+            <th>Kewarganegaraan</th>
+            <th>Edit</th>
             <th>Delete</th>
           </tr>
         </thead>
         <tbody id="tabel1">
           <!-- <tr>
-            <td>1</td>
-            <td>Doni</td>
-            <td>14 Januari 1999</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>Tia</td>
-            <td>16 Maret 1997</td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td>Bambang</td>
-            <td>27 September 1996</td>
-          </tr>
-          <tr>
-            <td>4</td>
-            <td>Julia</td>
-            <td>16 September 1996</td>
-          </tr>
-          <tr>
-            <td>5</td>
-            <td>Kiki</td>
-            <td>12 Oktober 1995</td>
-          </tr> -->
+              <td>1</td>
+              <td>Doni</td>
+              <td>14 Januari 1999</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Tia</td>
+              <td>16 Maret 1997</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Bambang</td>
+              <td>27 September 1996</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Julia</td>
+              <td>16 September 1996</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>Kiki</td>
+              <td>12 Oktober 1995</td>
+            </tr> -->
         </tbody>
       </table>
     </div>
@@ -101,7 +109,7 @@
           lalu lintas, dan lain-lain.
         </p>
         <br />
-        <p style="color: grey;"><b>2020 &copy; Rifki Harbi Awali</b></p>
+        <p style="color: grey"><b>2020 &copy; Rifki Harbi Awali</b></p>
       </div>
       <div class="map pd30">
         <h3 class="mb10">Maps</h3>
@@ -110,7 +118,7 @@
           width="420"
           height="200"
           frameborder="0"
-          style="border: 0;"
+          style="border: 0"
           allowfullscreen=""
           aria-hidden="false"
           tabindex="0"
@@ -118,7 +126,7 @@
       </div>
       <div class="medsos pd30">
         <h3 class="mb10">Contact</h3>
-        <ul class="icon-cont" style="color: grey; font-size: 17px;">
+        <ul class="icon-cont" style="color: grey; font-size: 17px">
           <li class="listnone">
             <img src="./img/icon/telephone.png" alt="Phone" />
             <span class="ml10">085793491196</span>
@@ -143,5 +151,6 @@
         </ul>
       </div>
     </footer>
+    <script type="text/javascript" src="./js/tampilData.js"></script>
   </body>
 </html>
